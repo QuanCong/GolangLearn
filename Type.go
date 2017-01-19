@@ -43,6 +43,16 @@ func main(){
 
 	fmt.Println(byte_value)
 
+	var array1 [10]int
+
+	for i,_:=range array1{
+		array1[i]=10;
+	}
+
+	var array2 [10] int=[10]int{1,2,3,4,5}
+	for i,_:=range array2{
+		println("array2:",array2[i])
+	}
 
 }
 
