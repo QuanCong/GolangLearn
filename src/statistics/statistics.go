@@ -1,4 +1,4 @@
-package main
+package a
 
 import (
 	"sort"
@@ -27,6 +27,15 @@ const (
 	anError = `<p class="error">%s</p>`
 )
 
+func Export()  {
+	fmt.Println("这是一个导出方法")
+}
+
+type Result struct {
+	numbers []float64
+	mean    float64 //均值
+	median  float64 //中位数
+}
 type result struct {
 	numbers []float64
 	mean    float64 //均值
