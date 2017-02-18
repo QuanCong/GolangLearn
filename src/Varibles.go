@@ -2,8 +2,19 @@ package main
 
 import "fmt"
 
+type F1 float64
+type F2 float64
+
+
 func main() {
-	var int_value int
+
+	var f1 F1=10.2
+	var f2 F2=10.3
+
+	//fmt.Println(f1-f2)//虽然底层都是float64，但是不能直接运算
+	fmt.Println(f1-F1(f2))
+
+	/*var int_value int
 	int_value=10
 
 	a:=12//简化的方式 常用 相当于 var a in  a=10
@@ -15,11 +26,11 @@ func main() {
 
 	fmt.Println("hello",int_value,a,b)
 
-	/*const (
+	*//*const (
 		ai=iota//0
 		bi=iota//1
 		ci=iota//2
-	)*/
+	)*//*
 	//上式简化为
 	const (
 		ai=iota
@@ -41,7 +52,18 @@ func main() {
 	)
 
 
-	fmt.Println(ai,bi,ci,di,ei)
+	fmt.Println(ai,bi,ci,di,ei)*/
+
+
+	/*a:=new(int)
+	b:=new(int)
+	fmt.Println(a)//0xc042008290
+	fmt.Println(*a)//0
+	fmt.Println(a==b)//false*/
+
+
+
+
 }
 
 func name()(firstname string,lastname string,nickname string)  {
